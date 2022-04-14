@@ -1,7 +1,7 @@
 import { ThemeProvider } from '@mui/material';
 import { useContext } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { FirebaseContext } from '.';
 import './App.css';
 import AppRouter from './components/AppRouter';
@@ -22,12 +22,12 @@ function App() {
     }
 
     return (
-        <HashRouter>
+        <BrowserRouter>
             <ThemeProvider theme={theme}>
                 <Navbar />
                 <AppRouter />
             </ThemeProvider>
-        </HashRouter>
+        </BrowserRouter>
     );
 }
 
